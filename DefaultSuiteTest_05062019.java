@@ -2,7 +2,7 @@
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
-import static org.junit.Assert.*;
+import static org.junit.Assert.*;//IDE
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNot.not;
 import org.openqa.selenium.By;
@@ -33,9 +33,7 @@ public class DefaultSuiteTest {
   }
   @Test
   public void googleClassRoomWithoutLogin() {
-    driver.get("https://classroom.google.com/signin/v2/sl/pwd?service=classroom&passive=1209600&continue=https%3A%2F%2Fclassroom.google.com%2F&followup=https%3A%2F%2Fclassroom.google.com%2F&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
-    driver.manage().window().setSize(new Dimension(550, 691));
-    driver.findElement(By.name("password")).sendKeys("XXXXXXXX");
+    
     driver.findElement(By.cssSelector("#passwordNext .RveJvd")).click();
     {
       WebElement element = driver.findElement(By.cssSelector(".gb_Ea"));
